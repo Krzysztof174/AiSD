@@ -39,6 +39,14 @@
             label1 = new Label();
             button6 = new Button();
             button7 = new Button();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
+            textBox4 = new TextBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -147,11 +155,92 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(952, 119);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(409, 35);
+            textBox3.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(1130, 72);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 30);
+            label2.TabIndex = 12;
+            label2.Text = "lista";
+            // 
+            // button8
+            // 
+            button8.Location = new Point(919, 183);
+            button8.Name = "button8";
+            button8.Size = new Size(208, 40);
+            button8.TabIndex = 13;
+            button8.Text = "dodaj pierwszy";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(919, 266);
+            button9.Name = "button9";
+            button9.Size = new Size(208, 40);
+            button9.TabIndex = 14;
+            button9.Text = "dodaj ostatni";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(1215, 183);
+            button10.Name = "button10";
+            button10.Size = new Size(191, 40);
+            button10.TabIndex = 15;
+            button10.Text = "usun pierwszy";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(1215, 266);
+            button11.Name = "button11";
+            button11.Size = new Size(191, 40);
+            button11.TabIndex = 16;
+            button11.Text = "usun ostatni";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(930, 373);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(175, 35);
+            textBox4.TabIndex = 17;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(979, 331);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 30);
+            label3.TabIndex = 18;
+            label3.Text = "Liczba";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1494, 450);
+            Controls.Add(label3);
+            Controls.Add(textBox4);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(label2);
+            Controls.Add(textBox3);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label1);
@@ -183,5 +272,13 @@
         private Label label1;
         private Button button6;
         private Button button7;
+        private TextBox textBox3;
+        private Label label2;
+        private Button button8;
+        private Button button9;
+        private Button button10;
+        private Button button11;
+        private TextBox textBox4;
+        private Label label3;
     }
 }

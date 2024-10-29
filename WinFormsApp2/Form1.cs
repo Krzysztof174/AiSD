@@ -310,5 +310,36 @@ namespace WinFormsApp2
         {
             selectedSort = 5;
         }
+        private List list = new List();
+        int numberForList;
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            numberForList = int.Parse(textBox4.Text);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            list.AddFirst(numberForList);
+            textBox3.Text = list.ListToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            list.AddLast(numberForList);
+            textBox3.Text = list.ListToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            list.RemoveFirst();
+            textBox3.Text = list.ListToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            list.RemoveLast();
+            textBox3.Text = list.ListToString();
+        }
     }
 }
