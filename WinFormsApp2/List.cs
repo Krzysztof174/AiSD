@@ -9,8 +9,8 @@ namespace WinFormsApp2
 {
     internal class List
     {
-        public Node Head = null;
-        public Node Tail = null;
+        public Node Head;
+        public Node Tail;
         public int Count = 0;
 
         public void AddFirst(int number)
@@ -20,6 +20,7 @@ namespace WinFormsApp2
             if (Count == 0)
             {
                 Head = node;
+                Tail = node;
                 Count++;
                 return;
             }
@@ -67,18 +68,19 @@ namespace WinFormsApp2
                 this.Count--;
                 return;
             }
-            this.Head = this.Head.prev;
-            this.Head.next = null;
+            this.Tail = this.Tail.prev;
+            this.Tail.next = null;
             this.Count--;
         }
         public string ListToString()
         {
             string concat = "";
+            Node tmp = Head;
             if (Count == 0) return "";
-            while (this.Head != null)
+            while (tmp != null)
             {
-                concat += " " + Head.data;
-                this.Head = this.Head.next;
+                concat += " " + tmp.data;
+                tmp = tmp.next;
             }
             return concat;
         }
