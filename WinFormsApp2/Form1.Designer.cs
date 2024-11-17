@@ -47,6 +47,12 @@
             button11 = new Button();
             textBox4 = new TextBox();
             label3 = new Label();
+            textBox5 = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            textBox6 = new TextBox();
+            button12 = new Button();
+            button13 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -228,11 +234,72 @@
             label3.TabIndex = 18;
             label3.Text = "Liczba";
             // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(952, 577);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(409, 35);
+            textBox5.TabIndex = 19;
+            textBox5.TextChanged += textBox5_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(1107, 529);
+            label4.Name = "label4";
+            label4.Size = new Size(123, 30);
+            label4.TabIndex = 20;
+            label4.Text = "lista drzewo";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(1130, 647);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 30);
+            label5.TabIndex = 21;
+            label5.Text = "Liczba";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(1082, 691);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(175, 35);
+            textBox6.TabIndex = 22;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(996, 763);
+            button12.Name = "button12";
+            button12.Size = new Size(131, 40);
+            button12.TabIndex = 23;
+            button12.Text = "dodaj";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // button13
+            // 
+            button13.Location = new Point(1215, 763);
+            button13.Name = "button13";
+            button13.Size = new Size(131, 40);
+            button13.TabIndex = 24;
+            button13.Text = "usun";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1494, 450);
+            ClientSize = new Size(1494, 971);
+            Controls.Add(button13);
+            Controls.Add(button12);
+            Controls.Add(textBox6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(textBox5);
             Controls.Add(label3);
             Controls.Add(textBox4);
             Controls.Add(button11);
@@ -280,5 +347,11 @@
         private Button button11;
         private TextBox textBox4;
         private Label label3;
+        private TextBox textBox5;
+        private Label label4;
+        private Label label5;
+        private TextBox textBox6;
+        private Button button12;
+        private Button button13;
     }
 }

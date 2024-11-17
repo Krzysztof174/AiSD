@@ -341,5 +341,37 @@ namespace WinFormsApp2
             list.RemoveLast();
             textBox3.Text = list.ListToString();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        Tree tree = new Tree();
+        int treeValue;
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            // Printed tree box
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            // Tree element input
+            treeValue  = int.Parse(textBox6.Text);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            // Add to tree
+            tree.Insert(treeValue);
+            textBox5.Text = tree.TreeToString(tree.root);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            // Remove from tree
+            tree.Remove(treeValue);
+            textBox5.Text = tree.TreeToString(tree.root);
+        }
     }
 }
