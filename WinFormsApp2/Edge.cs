@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp2
 {
-    internal class GNode
+    internal class Edge
     {
-        public int data;
+        public GNode start;
+        public GNode end;
+        public int weight;
     }
 }
