@@ -78,8 +78,52 @@
             return decodedText;
         }
 
+        static void NWP(int[] ciag1, int[] ciag2)
+        {
+            int[,] tab = new int[ciag1.Length, ciag2.Length];
+
+            for (int j = 0; j < ciag1.Length; j++)
+            {
+                tab[0, j] = 0;
+            }
+            for (int j = 0; j < ciag2.Length; j++)
+            {
+                tab[j, 0] = 0;
+            }
+
+            for (int i = 1; i < ciag1.Length; i++)
+            {
+                for (int j = 1; j < ciag2.Length; j++)
+                {
+                    if (ciag1[i] == ciag2[j])
+                    {
+                        tab[i, j] = tab[i - 1, j - 1] + 1;
+                    }
+                    else
+                    {
+                        if (tab[i - 1, j] > tab[i, j - 1])
+                        {
+                            tab[i, j] = tab[i - 1, j];
+                        }
+                        else
+                        {
+                            tab[i, j] = tab[i, j - 1];
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < ciag1.Length; i++)
+            {
+                for (int j = 0; j < ciag2.Length; j++)
+                {
+                    Console.WriteLine(tab[i, j]);
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Enter a string to encode:");
             var input = Console.ReadLine();
 
@@ -104,6 +148,21 @@
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
+            */
+            int[] tab1 = new int[4];
+            int[] tab2 = new int[4];
+
+            for (int j = 0; j < 3; j++)
+            {
+                tab1[j] = j;
+            }
+            for (int j = 0; j < 2; j++)
+            {
+                tab2[j] = j;
+            }
+            tab2[2] = 5;
+
+            NWP(tab1, tab2);
         }
     }
 }
